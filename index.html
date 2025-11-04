@@ -523,7 +523,7 @@
         <div class="header">
             <h1>3D 手-物交互评分系统</h1>
             <p>评估四种手-相机交互方法的性能表现<br>
-            样本范围: 0-2075  | 随机抽取: 50个样本</p>
+            样本范围: 0-2075  | 随机抽取: 20个样本</p>
         </div>
 
         <div class="progress-bar">
@@ -536,7 +536,7 @@
                 <div class="stat-label">当前进度</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" id="totalSamples">50</div>
+                <div class="stat-number" id="totalSamples">20</div>
                 <div class="stat-label">总样本数</div>
             </div>
             <div class="stat-card">
@@ -669,9 +669,9 @@
         };
 
         // 生成随机样本ID
-        function generateRandomSamples(count = 50) {
+        function generateRandomSamples(count = 20) {
             const allIds = [];
-            for (let i = 1970; i <= 2075; i++) {
+            for (let i = 0; i <= 2075; i++) {
                 allIds.push(i);
             }
             
@@ -1013,7 +1013,7 @@
 
         // 初始化评估系统
         function initializeEvaluation() {
-            samples = generateRandomSamples(50);
+            samples = generateRandomSamples(20);
             currentSampleIndex = 0;
             evaluationResults = [];
             isEvaluationActive = false;
